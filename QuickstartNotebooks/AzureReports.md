@@ -56,7 +56,7 @@
  SELECT * FROM azurecostanalysiss_csv
  ```
 
-
+  ![RunQueries](https://chepra.blob.core.windows.net/images/Step4RunQueries.JPG)
 
 
 
@@ -70,7 +70,7 @@
  SELECT * FROM azurecostanalysiss_csv WHERE ResourceType="microsoft.hdinsight/clusters" AND PreTaxCost > 100
  ```
 
-
+![Step5display](https://chepra.blob.core.windows.net/images/Step5Display.JPG)
 
 
  # Step6: Display a chart.
