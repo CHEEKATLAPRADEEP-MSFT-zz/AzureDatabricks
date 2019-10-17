@@ -1,10 +1,10 @@
 -- Databricks notebook source
--- MAGIC %md # This notebook is dedicated to Azure Cost Analysis Reports
+-- MAGIC %md # This notebook is dedicated to get Azure Cost Analysis Reports
 
 -- COMMAND ----------
 
 -- MAGIC %md 
--- MAGIC **To get the sample data you may follow the steps mentioned below:**
+-- MAGIC **Step1: Get the sample data to make Azure Cost Analysis Reports, you may follow the below steps:**
 -- MAGIC 
 -- MAGIC * Login to **Azure Portal**
 -- MAGIC * Select **Azure Internal Consumption subscription**
@@ -14,47 +14,47 @@
 -- MAGIC * Select the format you want to get the data **CSV**
 -- MAGIC * Click on **Download Data**
 -- MAGIC 
--- MAGIC ![Azurewala](https://chepra.blob.core.windows.net/images/GetData.jpg)
+-- MAGIC   ![Azurewala](https://chepra.blob.core.windows.net/images/GetData.jpg)
 
 -- COMMAND ----------
 
--- MAGIC %md #Upload data to Databricks File System (DBFS):
+-- MAGIC %md # Step2: Upload data to Databricks File System (DBFS)
 -- MAGIC * Login to **Databricks Portal**
 -- MAGIC * Click **Data** and **Add Data**
 -- MAGIC 
--- MAGIC ![DataDataFile](https://chepra.blob.core.windows.net/images/DataData.jpg)
+-- MAGIC   ![DataDataFile](https://chepra.blob.core.windows.net/images/DataData.jpg)
 -- MAGIC 
 -- MAGIC * Click on **Drop files to upload, or browse**
 -- MAGIC * Select a **file from local machine to upload**
 -- MAGIC 
--- MAGIC ![UploadData](https://chepra.blob.core.windows.net/images/UploadData.JPG)
+-- MAGIC   ![UploadData](https://chepra.blob.core.windows.net/images/UploadData.JPG)
 -- MAGIC 
 -- MAGIC * Select a **Cluster to Preview the Table**
 -- MAGIC * Click on **Preview Table**
 -- MAGIC 
--- MAGIC ![PreviewTable](https://chepra.blob.core.windows.net/images/UploadData.JPG)
+-- MAGIC   ![PreviewTable](https://chepra.blob.core.windows.net/images/UploadData.JPG)
 -- MAGIC 
 -- MAGIC * Modify **Table Name** and **Schema**
 -- MAGIC * Select **First row is header**
 -- MAGIC * Click **Create Table**
 -- MAGIC 
--- MAGIC ![DefineSchema](https://chepra.blob.core.windows.net/images/DefineSchema.JPG)
+-- MAGIC   ![DefineSchema](https://chepra.blob.core.windows.net/images/DefineSchema.JPG)
 -- MAGIC 
 -- MAGIC * Table has created.
 
 -- COMMAND ----------
 
--- MAGIC %md # Create a Notebook 
+-- MAGIC %md # Step3: Create a Notebook 
 -- MAGIC 
 -- MAGIC * Provide the name of **notebook**
 -- MAGIC * Select Language **SQL**
 -- MAGIC * Select Cluster **azure**
 -- MAGIC 
--- MAGIC ![Notebook](https://chepra.blob.core.windows.net/images/Notebook.JPG)
+-- MAGIC   ![Notebook](https://chepra.blob.core.windows.net/images/Notebook.JPG)
 
 -- COMMAND ----------
 
--- MAGIC %md # Run SQL Queries as Follows
+-- MAGIC %md # Step4: Run SQL Queries as Follows
 -- MAGIC 
 -- MAGIC * To get complete result from the table run following SQL Query
 -- MAGIC 
@@ -68,7 +68,7 @@ SELECT * FROM azurecostanalysiss_csv
 
 -- COMMAND ----------
 
--- MAGIC %md #Engineers who consumed HDInsight resources greater than 100 USD
+-- MAGIC %md #Step5: Engineers who consumed HDInsight resources greater than 100 USD
 -- MAGIC 
 -- MAGIC * Use the following sql query to get this results
 -- MAGIC 
@@ -82,7 +82,7 @@ SELECT * FROM azurecostanalysis_csv WHERE ResourceType="microsoft.hdinsight/clus
 
 -- COMMAND ----------
 
--- MAGIC %md Display a chart.
+-- MAGIC %md #Step6: Display a chart.
 -- MAGIC 
 -- MAGIC * Click the **Bar chart icon** and  **Chart Button**
 -- MAGIC 
@@ -99,10 +99,6 @@ SELECT * FROM azurecostanalysis_csv WHERE ResourceType="microsoft.hdinsight/clus
 -- MAGIC * Click on the **Plot View**
 -- MAGIC 
 -- MAGIC ![CustomPlot](https://chepra.blob.core.windows.net/images/Customizeplot.JPG)
-
--- COMMAND ----------
-
-SELECT * FROM azurecostanalysis_csv WHERE ResourceType="microsoft.hdinsight/clusters" AND PreTaxCost > 100
 
 -- COMMAND ----------
 
