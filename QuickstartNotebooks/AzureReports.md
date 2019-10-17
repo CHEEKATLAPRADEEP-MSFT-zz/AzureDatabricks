@@ -1,4 +1,4 @@
-# This notebook is dedicated to Azure Cost Analysis Reports
+# This notebook is to get Azure Cost Analysis Reports
 
  # **Step1: Get the sample data to make Azure Cost Analysis Reports, you may follow the below steps:**
 
