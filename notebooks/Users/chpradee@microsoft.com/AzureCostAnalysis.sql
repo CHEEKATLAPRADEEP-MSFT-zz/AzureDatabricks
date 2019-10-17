@@ -8,3 +8,11 @@ SELECT * FROM azurecostanalysis_csv WHERE ResourceType="microsoft.hdinsight/clus
 
 -- COMMAND ----------
 
+SELECT * FROM azurecostanalysis_csv WHERE ResourceGroupName="Analytics-Resources" 
+
+-- COMMAND ----------
+
+SELECT * FROM azurecostanalysis_csv WHERE ResourceGroupName="analytics-resources" 
+
+-- COMMAND ----------
+
